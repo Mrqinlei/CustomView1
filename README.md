@@ -51,18 +51,23 @@
 		-	通过 ACTION_DOWN 和 ACTION_UP 修改设置的 flag 并触发 invalidate();
 		-	在 onDraw() 根据不同的 flag 使用不同的 paint 绘制文字
 
+#### 事件
+1.	当滑块要向左,或向右时提供一个回调
+	-	在外面定义一个接口
+	-	并在自定义View设置该接口的属性 并提供 setter 方法
+	-	在ACTION_UP 中触发事件
+
 ### 其他
+### 其他
+1.	//获取文本的大小的方法
 ```
-	//获取文本的大小的方法
     Rect leftRect = new Rect();
     textPaint.getTextBounds(leftString, 0, leftString.length(), leftRect);
 ```
-
+2.	//sp 转 px 的方法
 ```
-	//sp 转 px 的方法
 	private int spToPx(int textSize) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 textSize, getResources().getDisplayMetrics());
     }
 ```
-
