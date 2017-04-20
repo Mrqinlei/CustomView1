@@ -58,7 +58,6 @@
 	-	在ACTION_UP 中触发事件
 
 ### 其他
-### 其他
 1.	//获取文本的大小的方法
 ```
     Rect leftRect = new Rect();
